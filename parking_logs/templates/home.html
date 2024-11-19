@@ -12,20 +12,9 @@
       <form method="post">
           {% csrf_token %}
           {{ form.as_p }}
-          <div style="display: flex; 
-               justify-content: space-around; 
-               align-items:center;
-              ">
+          <div class="btn-group-low">
               <button type="submit">Submit Ticket</button>
-              <a type="button" href="{% url 'history' %}" target="_self"
-                 style="
-                    background-color: #2E2E2E;
-                    color: white;
-                    padding: 1rem;
-                    width: auto;
-                    cursor: pointer;
-                    border-radius: 0.4rem;
-                  ">View History</a>
+              <a type="button" href="{% url 'history' %}" target="_self">View History</a>
           </div>
       </form>
     </main>

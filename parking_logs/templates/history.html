@@ -7,46 +7,37 @@
         <title>Parking Ticket History</title>
     </head>
     <body style="width: 320px; margin: auto;">
-        <h1>Ticket History</h1>
-        <form method="post">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <div class="logs-container"
-                 style="margin-bottom:1rem;">
-                {% if tickets %}
-                    <table style="color: red; font-family: monospace;">
-                        <tr>
-                            <th>Street Address</th>
-                            <th>Time</th>
-                            <th>Date</th>
-                        </tr>
-                        {% for ticket in tickets %}
-                        <tr>
-                            <td>{{ ticket.street_address }}</td>
-                            <td>{{ ticket.datetime.time|date:"H:i" }}</td>
-                            <td>{{ ticket.datetime.date|date:"m/d/Y" }}</td>
-                        </tr>
-                        {% endfor %}
-                    </table>
-                {% else %}
-                    <p>No tickets found for this search.</p>
-                {% endif %}
-            </div>
-            <div style="display: flex; 
-                 justify-content: space-around; 
-                  align-items:center;
-            ">
-                <button type="submit">Search</button>
-                <a type="button" href="{% url 'home' %}" target="_self"
-                   style="
-                    background-color: #2E2E2E;
-                    color: white;
-                    padding: 1rem;
-                    width: auto;
-                    cursor: pointer;
-                    border-radius: 0.4rem;
-                    ">Enter New Ticket</a>
-            </div>
-        </form>
+        <div class="container-phone-size">
+            <h1>Ticket History</h1>
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <div class="logs-container"
+                     style="margin-bottom:1rem;">
+                    {% if tickets %}
+                        <table style="color: red; font-family: monospace;">
+                            <tr>
+                                <th>Street Address</th>
+                                <th>Time</th>
+                                <th>Date</th>
+                            </tr>
+                            {% for ticket in tickets %}
+                            <tr>
+                                <td>{{ ticket.street_address }}</td>
+                                <td>{{ ticket.datetime.time|date:"H:i" }}</td>
+                                <td>{{ ticket.datetime.date|date:"m/d/Y" }}</td>
+                            </tr>
+                            {% endfor %}
+                        </table>
+                    {% else %}
+                        <p>No tickets found for this search.</p>
+                    {% endif %}
+                </div>
+                <div class="btn-group-low">
+                    <button type="submit">Search</button>
+                    <a type="button" href="{% url 'home' %}" target="_self">Enter New Ticket</a>
+                </div>
+            </form>
+        </div>
     </body>
 </html>
