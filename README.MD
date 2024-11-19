@@ -13,7 +13,21 @@ A Django-based application that allows users to log encounters with parking chec
 ---
 
 ## Project Structure
-project/ ├── parking_logs/ # Main Django app │ ├── templates/ # HTML templates │ ├── models/ # Models for the database │ ├── views/ # Views for the application │ ├── static/ # Static files (CSS, JavaScript) │ └── style.css # Main stylesheet ├── db.sqlite3 # SQLite database file ├── manage.py # Django's management script ├── static/ # Project-wide static folder └── README.md
+project/ 
+  ├── parking_logs/ # Main Django app 
+    │ 
+    ├── templates/ # HTML templates 
+    │
+    ├── models/ # Models for the database 
+    │ 
+    ├── views/ # Views for the application 
+│ 
+├── static/ # Static files (CSS, JavaScript) 
+      │ 
+      └── style.css # Main stylesheet 
+├── db.sqlite3 # SQLite database file 
+├── manage.py # Django's management script
+└── README.md
 
 # Project documentation
 
