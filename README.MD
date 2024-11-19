@@ -13,6 +13,7 @@ A Django-based application that allows users to log encounters with parking chec
 ---
 
 ## Project Structure
+```bash
 project/ 
   ├── parking_logs/ # Main Django app 
     │ 
@@ -28,6 +29,7 @@ project/
 ├── db.sqlite3 # SQLite database file 
 ├── manage.py # Django's management script
 └── README.md
+```
 
 # Project documentation
 
